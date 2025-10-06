@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+/* Modo claro */
+body.bg-light {
+    background-color: #f3f0ff;
+    color: #2c1e50;
+}
+
+/* Modo escuro */
+body.bg-dark {
+    background-color: #1b1037;
+    color: #e0dfff;
+}
+
+/* Header */
+header {
+    background: url('img/navtest1.png') center/cover no-repeat;
+    backdrop-filter: brightness(0.5);
+}
+
+/* Botões card */
+.btn-primary {
+    background-color: #5a4cdb;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #4a3cc3;
+    transform: scale(1.03);
+}
+
+
+
+/* botão navbar */
+.btn-outline-light {
+    border: 2px solid white;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #5a4cdb;
+    transform: scale(1.03);
+}
+
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 20px;
+}
+
+.card.shadow {
+    background-color: black;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+body.bg-dark .card {
+    background-color: #242424;
+    color: #e0dfff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* formularios*/
+.login-container, .cadastro-container {
+    max-width: 420px;
+    margin: 5% auto;
+    background-color: white;
+    color: #2c1e50;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+body.bg-dark .login-container,
+body.bg-dark .cadastro-container {
+    background-color: #242424;
+    color: #e0dfff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Mensagens */
+.erro {
+    color: #ff6b6b;
+    background-color: #ffecec;
+    border: 1px solid #ff6b6b;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+body.bg-dark .erro {
+    background-color: #402020;
+    color: #ff6b6b;
+}
+
+.sucesso {
+    color: #38b000;
+    background-color: #e6ffe6;
+    border: 1px solid #38b000;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+body.bg-dark .sucesso {
+    background-color: #203520;
+    color: #38b000;
+}
+
+/*link */
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Rodapé fixo no fundo */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: url('img/navtest1.png') center/cover no-repeat;
+    backdrop-filter: brightness(0.5);
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
+}

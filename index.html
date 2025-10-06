@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Petops</title>
+
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="cssgeral.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+</head>
+
+  <style>
+    body.bg-dark #sobre {
+      color: white;
+    }
+
+    body.bg-dark #sobre strong {
+      color: white;
+    }
+
+    body.bg-dark #sobre .list-group-item {
+      color: white;
+    }
+    
+  </style>
+
+
+<body class="bg-light d-flex flex-column min-vh-100">
+  <header class="d-flex align-items-center justify-content-between px-3 py-2 text-white">
+
+    <div><img src="img/logotest.png" alt="Logo Petops" height="50"></div>
+
+
+
+    <div class="d-flex align-items-center gap-2">
+      <a href="login.php"><button class="btn btn-outline-light btn-sm">Entrar</button></a>
+      <a href="cadastro.php"><button class="btn btn-outline-light btn-sm">Cadastrar</button></a>
+      <button class="btn btn-outline-light" onclick="toggleTheme()" title="Alternar tema">
+        <i data-lucide="moon-star"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-fill">
+    <section class="text-center py-5" style="background: linear-gradient(to bottom, #5a4cdb, transparent);">
+      <img id="hero-img" class="w-50 hero-img" src="img/decopp.png" alt="Ilustração Esportiva">
+    </section>
+
+    <section id="servicos" class="container py-5">
+      <h2 class="text-center mb-5">Modalidades</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-sm-6 col-md-4">
+          <div class="card h-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Futebol</h3>
+              <p class="card-text">Treinamentos, peneiras e torneios para todas as idades. Jogue como um craque!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="card h-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Basquete</h3>
+              <p class="card-text">Domine a quadra com fundamentos, competições e clínicas com treinadores experientes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="card h-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Vôlei</h3>
+              <p class="card-text">Alta performance, técnica refinada e espírito de equipe — tudo em um só lugar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="text-center mb-4">Sobre o Petops</h2>
+          <p class="lead text-center">
+            O <strong>Petops</strong> é um projeto criado como Trabalho de Conclusão de Curso (TCC) pela turma de Desenvolvimento de Sistemas da 
+            <strong>ETEC Alberto Feres – Extensão Fatec Coimbra</strong>. Seu principal objetivo é ajudar e facilitar a vida de atletas 
+            que buscam oportunidades em peneiras esportivas, conectando talentos a eventos e seletivas de forma simples e acessível.
+          </p>
+          <div class="mt-4">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-transparent">
+                <i data-lucide="check-circle" class="me-2 text-success"></i>Plataforma simples e intuitiva
+              </li>
+              <li class="list-group-item bg-transparent">
+                <i data-lucide="check-circle" class="me-2 text-success"></i>Foco na inclusão e descoberta de novos talentos
+              </li>
+              <li class="list-group-item bg-transparent">
+                <i data-lucide="check-circle" class="me-2 text-success"></i>Divulgação gratuita de peneiras e eventos esportivos
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-light text-center py-3 mt-auto">
+    <p>&copy; 2025 Petops. Todos os direitos reservados.</p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const heroImg = document.getElementById('hero-img');
+      const dark = body.classList.contains('bg-dark');
+      body.classList.toggle('bg-dark', !dark);
+      body.classList.toggle('bg-light', dark);
+      heroImg.src = dark ? 'img/decopp.png' : 'img/decop2.png';
+    }
+
+    lucide.createIcons();
+  </script>
+</body>
+</html>
